@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.content-wrapper {
+    
+    padding: 0;
+    width: 100%;
+    padding: 15px;
+    margin:auto;
+}
+.expense-content h2 {
+    font-weight: 200;
+    color: #8a00e6;
+
+}
+.expense-content{
+   
+    margin:auto;
+    margin-top: 4%;
+    width: 80%;
+    padding-bottom: 30px;
+}
+
+.expense-partition2 h2{
+    text-align: center;
+}
+/* input[type=text], input[type=number]{
+    border:none;
+    border-bottom: 1px solid rgba(1,1,0,0.3);
+    width:80%;
+    
+} */
+textarea {
+    width: 80%;
+    border: 1px solid rgba(1,1,0,0.3)
+}
+.margin-top1 {
+    margin-top: 60px; 
+}
+.margin-top2{
+    margin-top: 30px;
+}
+.add-button {
+    border: none;
+    padding:10px 60px;
+    border-radius:20px;
+    background: #00cc66;
+    color: white;
+}
+.add-button:hover {
+    cursor: pointer
+}
