@@ -38,6 +38,7 @@ textarea {
     border: 1px solid rgba(1,1,0,0.3)
 }
 .margin-top1 {
+    margin:auto;
     margin-top: 60px; 
 }
 .margin-top2{
@@ -52,4 +53,7 @@ textarea {
 }
 .add-button:hover {
     cursor: pointer
+}
+.alternate-color:nth-child(odd) {
+    background: lightgrey;
 }

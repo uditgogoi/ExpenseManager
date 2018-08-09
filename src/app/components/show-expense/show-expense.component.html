@@ -1,23 +1,9 @@
-<h2><span><i class="fa fa-list-alt" style="color: #00cc66"></i></span> &nbsp;&nbsp;&nbsp;All Expense</h2>
-<!-- <ul class="list-group">
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-         Expense Category
-         <span style="color: #2eb82e">
-            {{expense.amount | currency:'INR':true}}
-         </span>
-    </li>
-</ul>
-
-
-<ul *ngFor= "let expense of expenseList " class="list-group">
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-         {{expense.category}}
-         <span style="color: #2eb82e">
-            {{expense.amount | currency:'INR':true}}
-         </span>
-    </li>
-</ul> -->
-<div class="row" style="margin:auto;background: #383838; color: white;padding: 10px 8px; margin-top: 30px;width: 98%; ">
+<h2>
+    <span style="color: #43a047;">
+            All Your Expense
+    </span>
+  </h2>
+<div class="row margin-top1" style="background: #383838; color: white;padding: 10px 8px;width: 98%; ">
     <div class="col-md-6">
        Category
     </div>
@@ -28,7 +14,7 @@
         Date
     </div>
 </div>
-<div class="row alternate-color">
+<div class="row alternate-color" *ngFor= "let expense of expenseList " style="margin:auto;padding:8px 8px;width: 98%;">
     <div class="col-md-6">
         {{expense.category}}
      </div>
@@ -36,6 +22,6 @@
          {{expense.amount}}
      </div>
      <div class="col-md-3">
-         {{expense.date}}
+         {{expense.date | date}}
      </div>
 </div>

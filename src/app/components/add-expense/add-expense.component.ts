@@ -37,8 +37,10 @@ export class AddExpenseComponent implements OnInit {
                 amount: this.amount,
                 detail: this.detail
             }
+            console.log("newExpense",newExpense)
             this.expenseService.addExpense(newExpense)
             this.stateClear()
+
         }
         
     }
