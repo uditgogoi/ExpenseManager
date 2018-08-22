@@ -1,0 +1,22 @@
+<form class="example-form" style="margin-top:30px;">
+    <mat-form-field style="width:80%;float:left; margin:auto;" (click)="focusOnPlaceInput()">
+
+        <mat-chip-list #chipListExpenses>
+            <mat-chip style="margin-top:0.4em;" 
+                *ngFor="let option of  this.searchService.chiplistOptions"
+                >
+
+                <span>{{option.category}}</span>
+                <mat-icon (click)="removeOption(option)">cancel</mat-icon>
+            </mat-chip>
+            <input #autocompleteInput type="text" placeholder="Type here to search by category" aria-label="Number" [matChipInputFor]="chipListExpenses" [formControl]="searchBarCtrl"
+                [matAutocomplete]="auto" width="100%">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of autoCompleteList " [value]="option" (onSelectionChange)="filterExpenseList($event)">
+                    {{option.category}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-chip-list>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="filterList()">Search</button>
+</form>

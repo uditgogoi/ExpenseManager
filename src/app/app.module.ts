@@ -18,7 +18,11 @@ import { AddExpenseComponent } from './components/add-expense/add-expense.compon
 import { ShowExpenseComponent } from './components/show-expense/show-expense.component';
 import { HomeViewComponent } from './components/home-view/home-view.component';
 import { ExpenseService } from './data-model/expense.service';
+import { SearchService } from './components/search-bar/search.service';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { AnalyticsComponent } from './components/analytics/analytics.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,9 @@ import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/
     NavbarComponent,
     AddExpenseComponent,
     ShowExpenseComponent,
-    HomeViewComponent
+    HomeViewComponent,
+    SearchBarComponent,
+    AnalyticsComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,10 +60,12 @@ import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/
     MatExpansionModule,MatFormFieldModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [
     ExpenseService,
+    SearchService,
     {provide: MAT_DATE_LOCALE, useValue: 'en-GB'},
   ],
   bootstrap: [AppComponent]

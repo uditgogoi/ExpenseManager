@@ -11,9 +11,10 @@ export class ShowExpenseComponent implements OnInit {
     constructor(
         private expenseService: ExpenseService
     ) {
-        this.expenseService.getExpense().subscribe(expenses=>{
-            this.expenseList= expenses;
-        });
+        // this.expenseService.getExpense().subscribe(expenses=>{
+        //     this.expenseList= expenses;
+        // });
+        this.expenseService.getExpense();
     }
 
     ngOnInit() {

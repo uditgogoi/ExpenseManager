@@ -3,6 +3,9 @@
             All Your Expense
     </span>
   </h2>
+  <div>
+    <app-search-bar></app-search-bar>
+  </div>
 <div class="row margin-top1" style="background: #383838; color: white;padding: 10px 8px;width: 98%; ">
     <div class="col-md-6">
        Category
@@ -14,7 +17,7 @@
         Date
     </div>
 </div>
-<div class="row alternate-color" *ngFor= "let expense of expenseList " style="margin:auto;padding:8px 8px;width: 98%;">
+<div class="row alternate-color" *ngFor= "let expense of this.expenseService.expenses " style="margin:auto;padding:8px 8px;width: 98%;">
     <div class="col-md-6">
         {{expense.category}}
      </div>
