@@ -13,16 +13,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './navbar/navbar.component';
-import { AddExpenseComponent } from './components/add-expense/add-expense.component';
-import { ShowExpenseComponent } from './components/show-expense/show-expense.component';
-import { HomeViewComponent } from './components/home-view/home-view.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AddExpenseComponent } from './components/home-page/add-expense/add-expense.component';
+import { ShowExpenseComponent } from './components/home-page/show-expense/show-expense.component';
 import { ExpenseService } from './data-model/expense.service';
 import { SearchService } from './components/search-bar/search.service';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { AnalyticsComponent } from './components/analytics/analytics.component';
+import { AllExpensesComponent } from './components/all-expenses/all-expenses.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -30,9 +31,10 @@ import { AnalyticsComponent } from './components/analytics/analytics.component';
     NavbarComponent,
     AddExpenseComponent,
     ShowExpenseComponent,
-    HomeViewComponent,
     SearchBarComponent,
     AnalyticsComponent,
+    AllExpensesComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { Expenses } from '../../data-model/expenses';
-import { ExpenseService } from '../../data-model/expense.service';
+import { Expenses } from '../../../data-model/expenses';
+import { ExpenseService } from '../../../data-model/expense.service';
 @Component({
     selector: 'app-add-expense',
     templateUrl: './add-expense.component.html',

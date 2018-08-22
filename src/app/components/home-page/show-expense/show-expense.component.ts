@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ExpenseService } from '../../data-model/expense.service';
+import { ExpenseService } from '../../../data-model/expense.service';
 @Component({
     selector: 'app-show-expense',
     templateUrl: './show-expense.component.html',
