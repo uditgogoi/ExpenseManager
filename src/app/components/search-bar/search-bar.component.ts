@@ -1,4 +1,4 @@
-import { Component, OnInit,ElementRef, ViewChild} from '@angular/core';
+import { Component, OnInit,ElementRef, ViewChild,Output,EventEmitter} from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
@@ -20,6 +20,9 @@ export class SearchBarComponent implements OnInit {
     autoCompleteList:any[]=[]; 
 
     @ViewChild('autocompleteInput') autocompleteInput: ElementRef;
+
+    @Output() onSelectedOption = new EventEmitter();
+
 
 
 
@@ -62,6 +65,7 @@ export class SearchBarComponent implements OnInit {
         }
         else {
             this.searchService.chiplistOptions.push(expense);
+            this.onSelectedOption.emit(this.searchService.chiplistOptions)
         }
         this.focusOnPlaceInput();
     }
@@ -72,11 +76,13 @@ export class SearchBarComponent implements OnInit {
         if (index >= 0)
             this.searchService.chiplistOptions.splice(index, 1);
             this.focusOnPlaceInput();
-        if(this.searchService.chiplistOptions.length == 0)
-            this.expenseService.getExpense();
+
+            this.onSelectedOption.emit(this.searchService.chiplistOptions)
+
+        
 
     }
-
+    
     focusOnPlaceInput() {
         this.autocompleteInput.nativeElement.focus();
         this.autocompleteInput.nativeElement.value = '';
@@ -84,8 +90,7 @@ export class SearchBarComponent implements OnInit {
 
     filterList() {
         // need to changes this strategy
-        this.expenseService.expenses= this.searchService.chiplistOptions;
-        console.log(this.expenseService.expenses)
+       
     }
 
 

@@ -35,4 +35,8 @@ export class ExpenseService {
         return of(this.expenses)
     }
 
+    returnExpenseList() {
+        return this.expenses;
+    }
+
 }
