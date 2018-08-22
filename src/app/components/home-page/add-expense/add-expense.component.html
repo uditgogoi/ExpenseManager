@@ -1,52 +1,54 @@
 <h2>
-  <span>
-  </span>&nbsp;&nbsp;&nbsp;Add Your Expense
+    <span>
+    </span>&nbsp;&nbsp;&nbsp;Add Your Expense
 </h2>
-<form (ngSubmit)="onSubmit()">
-  <div class="row margin-top1">
-      <div class="col-md-12">
-              <i class="fa fa-calendar-check-o"></i> &nbsp;&nbsp;&nbsp; 
-              <mat-form-field class="example-full-width" style="width:70% ;">
-              <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]= "date" [ngModelOptions]="{standalone: true}">
-              <mat-datepicker-toggle matSuffix [for]="picker">
-              </mat-datepicker-toggle>
-              <mat-datepicker #picker ></mat-datepicker>
-          </mat-form-field>
-      </div>
-  </div>
-  <div class="row margin-top2">
-      <div class="col-md-12">
-          <!-- <input  matInput type='text' name='category' placeholder="Category" [(ngModel)]="category"> -->
-          <i class="fa fa-tag" style="color: #484848"></i>  &nbsp;&nbsp;&nbsp;          
-          <mat-form-field class="example-full-width" style="width:70% ;">
-                  <input matInput placeholder="Category" [(ngModel)]="category" name="category" [ngModelOptions]="{standalone: true}" required>
-          </mat-form-field>
-          
-      </div>
-  </div>
-  <div class="row margin-top2">
-      
-      <div class="col-md-12">
-          <!-- <input type='number' name='amount' placeholder="Amount" [(ngModel)]="amount"> -->
-          <i class="fa fa-inr" style="color: #484848"></i> &nbsp;&nbsp;&nbsp;
-          <mat-form-field class="example-full-width" style="width:70% ;">
-              <input  matInput type="number" placeholder="Amount" [(ngModel)]="amount" [ngModelOptions]="{standalone: true}" required>
-          </mat-form-field>
-      </div>
-  </div>
-  <div class="row margin-top2">
-      <div class="col-md-12">
-          <!-- <textarea name='detail' placeholder="Detail" [(ngModel)]="detail">
-                                  </textarea> -->
-          <i class="fa fa-pencil" style="color: #484848"></i> &nbsp;&nbsp;&nbsp;
-          <mat-form-field class="example-full-width" style="width:70% ;">
-              <textarea matInput placeholder="Leave a Note" [(ngModel)]="detail" category="detail" [ngModelOptions]="{standalone: true}"></textarea>
-          </mat-form-field>
-      </div>
-  </div>
-  <div class="row margin-top1">
-      <div class="col-md-12">
-          <button class="add-button">Add</button>
-      </div>
-  </div>
-</form>
+<mat-card>
+    <form (ngSubmit)="onSubmit()">
+        <div class="row margin-top1">
+            <div class="col-md-12">
+                <i class="fa fa-calendar-check-o"></i> &nbsp;&nbsp;&nbsp;
+                <mat-form-field class="example-full-width" style="width:70% ;">
+                    <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="date" [ngModelOptions]="{standalone: true}">
+                    <mat-datepicker-toggle matSuffix [for]="picker">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row margin-top2">
+            <div class="col-md-12">
+                <!-- <input  matInput type='text' name='category' placeholder="Category" [(ngModel)]="category"> -->
+                <i class="fa fa-tag" style="color: #484848"></i> &nbsp;&nbsp;&nbsp;
+                <mat-form-field class="example-full-width" style="width:70% ;">
+                    <input matInput placeholder="Category" [(ngModel)]="category" name="category" [ngModelOptions]="{standalone: true}" required>
+                </mat-form-field>
+
+            </div>
+        </div>
+        <div class="row margin-top2">
+
+            <div class="col-md-12">
+                <!-- <input type='number' name='amount' placeholder="Amount" [(ngModel)]="amount"> -->
+                <i class="fa fa-inr" style="color: #484848"></i> &nbsp;&nbsp;&nbsp;
+                <mat-form-field class="example-full-width" style="width:70% ;">
+                    <input matInput type="number" placeholder="Amount" [(ngModel)]="amount" [ngModelOptions]="{standalone: true}" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row margin-top2">
+            <div class="col-md-12">
+                <!-- <textarea name='detail' placeholder="Detail" [(ngModel)]="detail">
+                                                </textarea> -->
+                <i class="fa fa-pencil" style="color: #484848"></i> &nbsp;&nbsp;&nbsp;
+                <mat-form-field class="example-full-width" style="width:70% ;">
+                    <textarea matInput placeholder="Leave a Note" [(ngModel)]="detail" category="detail" [ngModelOptions]="{standalone: true}"></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-md-12">
+                <button class="add-button">Add</button>
+            </div>
+        </div>
+    </form>
+</mat-card>

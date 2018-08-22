@@ -24,6 +24,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { AnalyticsComponent } from './components/analytics/analytics.component';
 import { AllExpensesComponent } from './components/all-expenses/all-expenses.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     SearchBarComponent,
     AnalyticsComponent,
     AllExpensesComponent,
-    HomePageComponent
+    HomePageComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
