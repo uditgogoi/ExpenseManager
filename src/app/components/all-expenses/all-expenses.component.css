@@ -1,0 +1,28 @@
+.data-table {
+  width: 100%;
+}
+table {
+  width: 100%;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+thead {
+  background: rgb(212, 211, 211);
+  border: 1px solid rgb(212, 211, 211);;
+
+}
+
+tbody {
+  border: 1px solid rgba(1,1,0,0.3);
+  border-top: none;
+}
+
+th, td {
+  padding: 0.5em;
+}
+
+
+.detail {
+  text-overflow: ellipsis;
+}

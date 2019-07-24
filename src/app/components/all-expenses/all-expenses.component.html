@@ -1,3 +1,22 @@
-<p>
-  all-expenses works!
-</p>
+<div class="container">
+  <div class="h1">
+    All Expenses
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <th>Date</th>
+      <th>Category</th>
+      <th>Amount</th>
+      <th>Description</th>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let record of allExpenses">
+        <td>{{ record.date }}</td>
+        <td>{{  record.category }}</td>
+        <td>{{ record.amount }}</td>
+        <td class="detail" title={{record.detail}}>{{ record.detail }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

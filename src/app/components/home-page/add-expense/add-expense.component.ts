@@ -16,10 +16,10 @@ export class AddExpenseComponent implements OnInit {
     detail: string;
     amount : number;
     date: any= new Date;
-    
-    
-    
-    
+
+
+
+
     constructor(
         private expenseService: ExpenseService
     ) { }
@@ -33,7 +33,7 @@ export class AddExpenseComponent implements OnInit {
             var newExpense = {
                 id:  this.generateId(),
                 date: formatedDate,
-                category: this.category,
+                category: this.category.toLowerCase(),
                 amount: this.amount,
                 detail: this.detail
             }
@@ -42,7 +42,7 @@ export class AddExpenseComponent implements OnInit {
             this.stateClear()
 
         }
-        
+
     }
 
     stateClear() {
@@ -57,8 +57,8 @@ export class AddExpenseComponent implements OnInit {
             var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
             return v.toString(16);
         });
-          
-          
+
+
     }
     formatDate(date) {
         var d = new Date(date),
@@ -68,7 +68,7 @@ export class AddExpenseComponent implements OnInit {
         if (month.length < 2) month = '0' + month;
         if (day.length < 2) day = '0' + day;
         return [year, month, day].join('-');
-        
+
     }
 
 }

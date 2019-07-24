@@ -18,11 +18,9 @@ export class ExpenseService {
     constructor() { }
 
     addExpense(expense) {
-        console.log("+++", this.savedRecords)
         this.expenses.unshift(expense)
         localStorage.setItem('expenses', JSON.stringify(this.expenses) )
-        console.log(this.expenses)
-        
+
     }
 
     getExpense () : Observable<Expenses[]> {
